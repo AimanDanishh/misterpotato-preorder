@@ -1,173 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Mister Potato Preorder</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-body {
-  min-height: 100vh;
+body{
+  min-height:100vh;
+
   background:
-    linear-gradient(135deg, rgba(255,120,120,0.6), rgba(255,210,120,0.6)),
-    url('https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?q=80&w=1200&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+  linear-gradient(135deg,#ff9966,#ff5e62);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:30px;
 }
 
-.container {
-  width: 100%;
-  max-width: 700px;
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 28px;
-  padding: 35px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  color: white;
+.container{
+
+  width:100%;
+  max-width:750px;
+
+  background:rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,0.2);
+
+  border-radius:30px;
+
+  padding:35px;
+
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
+  color:white;
+
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+h1{
+  text-align:center;
+  font-size:2.7rem;
+  margin-bottom:8px;
 }
 
-.subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  opacity: 0.9;
+.subtitle{
+  text-align:center;
+  opacity:0.9;
+  margin-bottom:25px;
 }
 
-.info-box {
-  background: rgba(255,255,255,0.15);
-  padding: 18px;
-  border-radius: 18px;
-  margin-bottom: 25px;
-  line-height: 1.8;
+.info-box{
+
+  background:rgba(255,255,255,0.12);
+
+  padding:18px;
+
+  border-radius:18px;
+
+  line-height:1.9;
+
+  margin-bottom:25px;
+
 }
 
-label {
-  display: block;
-  margin-top: 18px;
-  margin-bottom: 8px;
-  font-weight: 600;
+label{
+  display:block;
+  margin-top:18px;
+  margin-bottom:8px;
+  font-weight:600;
 }
 
 input,
-select {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.18);
-  color: white;
-  font-size: 15px;
-  outline: none;
+select{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:16px;
+
+  outline:none;
+
+  background:rgba(255,255,255,0.15);
+
+  color:white;
+
+  font-size:15px;
+
 }
 
-input::placeholder {
-  color: rgba(255,255,255,0.7);
+input::placeholder{
+  color:rgba(255,255,255,0.7);
 }
 
-option {
-  color: black;
+option{
+  color:black;
 }
 
-.stock-box {
-  margin-top: 20px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 18px;
-  padding: 20px;
+.stock-box{
+
+  margin-top:25px;
+
+  background:rgba(255,255,255,0.12);
+
+  padding:20px;
+
+  border-radius:18px;
+
 }
 
-.stock-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
+.stock-item{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:12px;
+
 }
 
-.summary {
-  margin-top: 25px;
-  background: rgba(255,255,255,0.15);
-  padding: 20px;
-  border-radius: 18px;
-  line-height: 2;
+.summary{
+
+  margin-top:25px;
+
+  background:rgba(255,255,255,0.12);
+
+  padding:20px;
+
+  border-radius:18px;
+
+  line-height:2;
+
 }
 
-.qr {
-  text-align: center;
-  margin-top: 30px;
+.qr-section{
+
+  margin-top:30px;
+
+  text-align:center;
+
 }
 
-.qr img {
-  width: 220px;
-  border-radius: 18px;
-  border: 4px solid rgba(255,255,255,0.2);
+.qr-section img{
+
+  width:100%;
+  max-width:100%;
+
+  border-radius:20px;
+
+  margin-top:15px;
+
+  border:4px solid rgba(255,255,255,0.2);
+
+  object-fit:cover;
+
 }
 
-.upload-btn,
-.submit-btn,
-.channel-btn {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 16px;
-  margin-top: 18px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
+.upload-box{
+  margin-top:25px;
 }
 
-.upload-btn {
-  background: rgba(66,133,244,0.85);
-  color: white;
+.upload-box input{
+  background:rgba(255,255,255,0.12);
+  cursor:pointer;
 }
 
-.submit-btn {
-  background: rgba(255,255,255,0.9);
-  color: black;
-  cursor: pointer;
+button{
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:18px;
+
+  margin-top:30px;
+
+  background:white;
+
+  color:#ff5e62;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
 }
 
-.submit-btn:hover,
-.upload-btn:hover,
-.channel-btn:hover {
-  transform: translateY(-2px);
+button:hover{
+  transform:translateY(-2px);
 }
 
-.channel-btn {
-  background: rgba(37,211,102,0.9);
-  color: white;
+.success-box{
+
+  display:none;
+
+  text-align:center;
+
+  margin-top:30px;
+
+  background:rgba(0,255,120,0.12);
+
+  padding:25px;
+
+  border-radius:20px;
+
 }
 
-.success {
-  display: none;
-  margin-top: 25px;
-  background: rgba(0,255,100,0.12);
-  padding: 20px;
-  border-radius: 18px;
-  text-align: center;
+.channel-btn{
+
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:14px 24px;
+
+  border-radius:16px;
+
+  background:#25D366;
+
+  color:white;
+
+  text-decoration:none;
+
+  font-weight:600;
+
 }
 
-.loading {
-  opacity: 0.7;
-  pointer-events: none;
+.loading{
+  opacity:0.7;
+  pointer-events:none;
 }
 
 </style>
@@ -178,31 +262,103 @@ option {
 <div class="container">
 
 <h1>🥔 Mister Potato</h1>
-<p class="subtitle">Late Night Snack Preorder</p>
+
+<p class="subtitle">
+Late Night Snack Preorder
+</p>
 
 <div class="info-box">
-RM4 per pack<br>
-🚚 Free delivery for 3 packs and above<br>
+
+RM4 per pack 🍟
+
+<br>
+
+🚚 Free delivery for 3 packs and above
+
+<br>
+
 🚚 RM2 delivery fee for below 3 packs
+
+<br>
+
+📍 FREE pickup available at KDSE & KRP
+
 </div>
 
 <form id="orderForm">
 
 <label>Full Name</label>
-<input type="text" id="name" required>
+
+<input
+type="text"
+id="name"
+required
+>
 
 <label>Phone Number</label>
-<input type="tel" id="phone" required placeholder="01XXXXXXXX">
+
+<input
+type="tel"
+id="phone"
+placeholder="01XXXXXXXX"
+required
+>
 
 <label>Select Flavor</label>
-<select id="flavor" required></select>
+
+<select id="flavor" required>
+
+<option value="">
+Select Flavor
+</option>
+
+</select>
 
 <label>Quantity</label>
-<input type="number" id="quantity" min="1" value="1" required>
+
+<input
+type="number"
+id="quantity"
+min="0"
+value="0"
+required
+>
+
+<label>Delivery Method</label>
+
+<select id="deliveryMethod" required>
+
+<option value="">
+Select Delivery Method
+</option>
+
+<option value="pickup-kdse">
+Pickup at KDSE (Free)
+</option>
+
+<option value="pickup-krp">
+Pickup at KRP (Free)
+</option>
+
+<option value="delivery">
+Delivery to Residential College
+</option>
+
+</select>
+
+<div
+id="collegeContainer"
+style="display:none;"
+>
 
 <label>Residential College</label>
+
 <select id="college">
-<option value="">Select College</option>
+
+<option value="">
+Select College
+</option>
+
 <option>KTDI</option>
 <option>KTF</option>
 <option>KSZ</option>
@@ -211,169 +367,521 @@ RM4 per pack<br>
 <option>KTC</option>
 <option>KDSE</option>
 <option>Kolej Perdana</option>
+
 </select>
 
-<div class="stock-box" id="stockContainer">
+</div>
+
+<div
+class="stock-box"
+id="stockContainer"
+>
+
 Loading stock...
+
 </div>
 
-<div class="summary" id="summary">
-Total: RM6
+<div
+class="summary"
+id="summary"
+>
+
+Flavor: Not selected<br>
+Quantity: 0<br>
+Delivery Fee: RM0<br>
+Total Price: RM0
+
 </div>
 
-<div class="qr">
-<h3>📱 Scan To Pay</h3>
-<br>
-<img src="YOUR_QR_IMAGE_LINK_HERE">
+<div class="qr-section">
 
-<a class="upload-btn"
-href="YOUR_GOOGLE_FORM_UPLOAD_LINK"
-target="_blank">
+<h2>📱 Scan To Pay</h2>
+
+<!-- REPLACE QR IMAGE -->
+<img
+src="assets/QR_Izzat.jpeg"
+alt="QR Code"
+>
+
+</div>
+
+<div class="upload-box">
+
+<label>
 Upload Payment Proof
-</a>
+</label>
+
+<input
+type="file"
+id="paymentProof"
+accept="image/*,.pdf"
+required
+>
+
 </div>
 
-<button class="submit-btn" type="submit">
+<button
+type="submit"
+class="submit-btn"
+>
+
 Submit Order
+
 </button>
 
 </form>
 
-<div class="success" id="successBox">
-<h2>✅ Order Submitted!</h2>
-<br>
-<p>Thank you for supporting us 🥔</p>
+<div
+class="success-box"
+id="successBox"
+>
 
-<a class="channel-btn"
+<h2>
+✅ Order Submitted!
+</h2>
+
+<br>
+
+<div id="finalSummary"></div>
+
+<br>
+
+<p>
+Thank you for supporting our project 🥔
+</p>
+
+<a
+class="channel-btn"
 href="YOUR_CHANNEL_LINK"
-target="_blank">
+target="_blank"
+>
+
 Join Channel For Updates
+
 </a>
+
 </div>
 
 </div>
 
 <script>
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwv6N2JOvEB9RvauyM_OtkK13RM_OIrDHw-PjeI9ZV5bY8SU-hoc_vuiepItOqlptl-mQ/exec";
+const API_URL =
+"https://script.google.com/macros/s/AKfycbx95KZLKdWERoM1qWVcZ5ARTl2UYEZCSL2s0aEVOc9cpgDykI9nos16FpjzJ1kHJ8pn/exec";
 
-const flavorSelect = document.getElementById("flavor");
-const stockContainer = document.getElementById("stockContainer");
-const quantityInput = document.getElementById("quantity");
-const summary = document.getElementById("summary");
+const flavorSelect =
+document.getElementById("flavor");
+
+const stockContainer =
+document.getElementById("stockContainer");
+
+const quantityInput =
+document.getElementById("quantity");
+
+const summary =
+document.getElementById("summary");
+
+const deliveryMethod =
+document.getElementById("deliveryMethod");
+
+const collegeContainer =
+document.getElementById("collegeContainer");
 
 let stockData = [];
 
-async function loadStock() {
+deliveryMethod.addEventListener(
+"change",
 
-  const response = await fetch(API_URL);
-  stockData = await response.json();
+function(){
 
-  flavorSelect.innerHTML = "";
-  stockContainer.innerHTML = "";
+  if(this.value === "delivery"){
 
-  stockData.forEach(item => {
+    collegeContainer.style.display =
+    "block";
 
-    const option = document.createElement("option");
-    option.value = item.flavor;
-    option.textContent = `${item.flavor} (${item.stock} left)`;
+  }else{
 
-    if (item.stock <= 0) {
-      option.disabled = true;
-      option.textContent += " - SOLD OUT";
-    }
+    collegeContainer.style.display =
+    "none";
 
-    flavorSelect.appendChild(option);
+    document.getElementById("college").value = "";
 
-    stockContainer.innerHTML += `
-      <div class="stock-item">
-        <span>${item.flavor}</span>
-        <span>${item.stock} left</span>
-      </div>
-    `;
-  });
+  }
 
   updateTotal();
-}
 
-function updateTotal() {
+});
 
-  const quantity = Number(quantityInput.value);
+async function loadStock(){
 
-  let delivery = 2;
+  try{
 
-  if (quantity >= 3) {
-    delivery = 0;
-  }
+    const response =
+    await fetch(API_URL);
 
-  const total = quantity * 4 + delivery;
+    stockData =
+    await response.json();
 
-  summary.innerHTML = `
-    Quantity: ${quantity}<br>
-    Delivery: RM${delivery}<br>
-    Total: RM${total}
-  `;
-}
+    flavorSelect.innerHTML = `
 
-quantityInput.addEventListener("input", updateTotal);
+    <option value="">
+    Select Flavor
+    </option>
 
+    `;
 
-document.getElementById("orderForm")
-.addEventListener("submit", async function(e) {
+    stockContainer.innerHTML = "";
 
-  e.preventDefault();
+    stockData.forEach(item=>{
 
-  const submitBtn = document.querySelector(".submit-btn");
+      const option =
+      document.createElement("option");
 
-  submitBtn.innerText = "Submitting...";
-  submitBtn.classList.add("loading");
+      option.value =
+      item.flavor;
 
-  const quantity = Number(quantityInput.value);
+      option.textContent =
+      `${item.flavor} (${item.stock} left)`;
 
-  let delivery = 2;
+      if(item.stock <= 0){
 
-  if (quantity >= 3) {
-    delivery = 0;
-  }
+        option.disabled = true;
 
-  const total = quantity * 4 + delivery;
+        option.textContent +=
+        " - SOLD OUT";
 
-  const data = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    flavor: flavorSelect.value,
-    quantity: quantity,
-    college: document.getElementById("college").value,
-    delivery: delivery,
-    total: total
-  };
+      }
 
-  try {
+      flavorSelect.appendChild(option);
 
-    const response = await fetch(API_URL, {
-      method: "POST",
-      body: JSON.stringify(data)
+      stockContainer.innerHTML += `
+
+      <div class="stock-item">
+
+        <span>
+        ${item.flavor}
+        </span>
+
+        <span>
+        ${item.stock} left
+        </span>
+
+      </div>
+
+      `;
+
     });
 
-    const result = await response.json();
+    updateTotal();
 
-    if (result.status === "success") {
+  }catch(err){
 
-      document.getElementById("orderForm").style.display = "none";
-      document.getElementById("successBox").style.display = "block";
+    stockContainer.innerHTML =
+    "Failed to load stock.";
 
-      loadStock();
-
-    } else {
-      alert(result.message);
-    }
-
-  } catch (err) {
-    alert("Something went wrong.");
   }
 
-  submitBtn.innerText = "Submit Order";
-  submitBtn.classList.remove("loading");
+}
+
+function updateTotal(){
+
+  const quantity =
+  Number(quantityInput.value);
+
+  const flavor =
+  flavorSelect.value;
+
+  let delivery = 0;
+
+  if(
+    deliveryMethod.value === "delivery"
+  ){
+
+    if(quantity < 3 && quantity > 0){
+
+      delivery = 2;
+
+    }
+
+  }
+
+  let total = 0;
+
+  if(flavor && quantity > 0){
+
+    total =
+    quantity * 4 + delivery;
+
+  }
+
+  summary.innerHTML = `
+
+  Flavor:
+  ${flavor || "Not selected"}
+
+  <br>
+
+  Quantity:
+  ${quantity || 0}
+
+  <br>
+
+  Delivery Fee:
+  RM${delivery}
+
+  <br>
+
+  Total Price:
+  RM${total}
+
+  `;
+
+}
+
+quantityInput.addEventListener(
+"input",
+updateTotal
+);
+
+flavorSelect.addEventListener(
+"change",
+updateTotal
+);
+
+document
+.getElementById("orderForm")
+
+.addEventListener(
+"submit",
+
+async function(e){
+
+e.preventDefault();
+
+const submitBtn =
+document.querySelector(".submit-btn");
+
+submitBtn.innerText =
+"Submitting...";
+
+submitBtn.classList.add("loading");
+
+const quantity =
+Number(quantityInput.value);
+
+const flavor =
+flavorSelect.value;
+
+let delivery = 0;
+
+if(
+  deliveryMethod.value === "delivery"
+){
+
+  if(quantity < 3){
+
+    delivery = 2;
+
+  }
+
+}
+
+const total =
+quantity * 4 + delivery;
+
+const fileInput =
+document.getElementById("paymentProof");
+
+const file =
+fileInput.files[0];
+
+if(!flavor){
+
+  alert(
+    "Please select a flavor."
+  );
+
+  return;
+
+}
+
+if(quantity <= 0){
+
+  alert(
+    "Please enter quantity."
+  );
+
+  return;
+
+}
+
+if(!deliveryMethod.value){
+
+  alert(
+    "Please select delivery method."
+  );
+
+  return;
+
+}
+
+if(
+  deliveryMethod.value === "delivery"
+  &&
+  !document.getElementById("college").value
+){
+
+  alert(
+    "Please select residential college."
+  );
+
+  return;
+
+}
+
+if(!file){
+
+  alert(
+    "Please upload payment proof."
+  );
+
+  return;
+
+}
+
+if(file.size > 5 * 1024 * 1024){
+
+  alert(
+    "File too large. Max 5MB."
+  );
+
+  return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+async function(){
+
+const base64Data =
+reader.result.split(",")[1];
+
+const data = {
+
+  name:
+  document.getElementById("name").value,
+
+  phone:
+  document.getElementById("phone").value,
+
+  flavor:
+  flavor,
+
+  quantity:
+  quantity,
+
+  college:
+  document.getElementById("college").value,
+
+  delivery:
+  delivery,
+
+  total:
+  total,
+
+  file:{
+
+    fileName:
+    file.name,
+
+    mimeType:
+    file.type,
+
+    data:
+    base64Data
+
+  }
+
+};
+
+try{
+
+  const response =
+  await fetch(API_URL,{
+
+    method:"POST",
+
+    body:JSON.stringify(data)
+
+  });
+
+  const result =
+  await response.json();
+
+  if(result.status === "success"){
+
+    document
+    .getElementById("finalSummary")
+    .innerHTML = `
+
+    <b>Order Summary</b>
+
+    <br><br>
+
+    Flavor:
+    ${flavor}
+
+    <br>
+
+    Quantity:
+    ${quantity}
+
+    <br>
+
+    Delivery Fee:
+    RM${delivery}
+
+    <br>
+
+    Total Paid:
+    RM${total}
+
+    `;
+
+    document
+    .getElementById("orderForm")
+    .style.display = "none";
+
+    document
+    .getElementById("successBox")
+    .style.display = "block";
+
+    loadStock();
+
+  }else{
+
+    alert(result.message);
+
+  }
+
+}catch(err){
+
+  alert(
+    "Something went wrong."
+  );
+
+}
+
+submitBtn.innerText =
+"Submit Order";
+
+submitBtn.classList.remove("loading");
+
+};
+
+reader.readAsDataURL(file);
 
 });
 

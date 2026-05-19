@@ -8,9 +8,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -23,35 +23,110 @@ body{
   min-height:100vh;
 
   background:
-  linear-gradient(135deg,#ff9966,#ff5e62);
+  linear-gradient(
+    135deg,
+    #f7c600 0%,
+    #ffd93d 100%
+  );
 
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
 
-  padding:30px;
+  padding:24px;
 
 }
 
 .container{
 
   width:100%;
-  max-width:750px;
+  max-width:760px;
 
-  background:rgba(255,255,255,0.15);
+  background:
+  rgba(8, 44, 94, 0.96);
 
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
 
-  border:1px solid rgba(255,255,255,0.2);
+  border:
+  1px solid rgba(255,255,255,0.15);
 
-  border-radius:30px;
+  border-radius:32px;
 
-  padding:35px;
+  padding:40px 30px;
 
-  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.22);
 
   color:white;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.container::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-100px;
+  right:-100px;
+
+  width:220px;
+  height:220px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border-radius:50%;
+
+}
+
+.container::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-120px;
+  left:-120px;
+
+  width:260px;
+  height:260px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border-radius:50%;
+
+}
+
+.logo-wrapper{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  margin-bottom:5px;
+
+}
+
+.logo{
+
+  width:200px;
+  max-width:70%;
+
+  height:auto;
+
+  object-fit:contain;
+
+  filter:
+  drop-shadow(0 10px 18px rgba(0,0,0,0.28));
+
+  margin-bottom:5px;
 
 }
 
@@ -59,9 +134,13 @@ h1{
 
   text-align:center;
 
-  font-size:2.7rem;
+  font-size:2.5rem;
 
-  margin-bottom:8px;
+  font-weight:700;
+
+  margin-bottom:6px;
+
+  letter-spacing:-1px;
 
 }
 
@@ -71,21 +150,29 @@ h1{
 
   opacity:0.9;
 
-  margin-bottom:25px;
+  margin-bottom:28px;
+
+  font-size:1rem;
 
 }
 
 .info-box{
 
-  background:rgba(255,255,255,0.12);
+  background:
+  rgba(255,255,255,0.10);
 
-  padding:18px;
+  border:
+  1px solid rgba(255,255,255,0.10);
 
-  border-radius:18px;
+  padding:22px;
 
-  line-height:1.9;
+  border-radius:24px;
 
-  margin-bottom:25px;
+  line-height:2;
+
+  margin-bottom:28px;
+
+  font-size:15px;
 
 }
 
@@ -94,10 +181,11 @@ label{
   display:block;
 
   margin-top:18px;
-
   margin-bottom:8px;
 
   font-weight:600;
+
+  font-size:15px;
 
 }
 
@@ -106,25 +194,43 @@ select{
 
   width:100%;
 
-  padding:15px;
+  padding:16px 18px;
 
   border:none;
 
-  border-radius:16px;
+  border-radius:18px;
 
   outline:none;
 
-  background:rgba(255,255,255,0.15);
+  background:
+  rgba(255,255,255,0.10);
 
   color:white;
 
   font-size:15px;
 
+  border:
+  1px solid transparent;
+
+  transition:0.25s ease;
+
+}
+
+input:focus,
+select:focus{
+
+  border:
+  1px solid rgba(255,255,255,0.4);
+
+  background:
+  rgba(255,255,255,0.14);
+
 }
 
 input::placeholder{
 
-  color:rgba(255,255,255,0.7);
+  color:
+  rgba(255,255,255,0.65);
 
 }
 
@@ -136,45 +242,98 @@ option{
 
 .stock-box{
 
-  margin-top:25px;
+  margin-top:28px;
 
-  background:rgba(255,255,255,0.12);
+  background:
+  rgba(255,255,255,0.08);
 
-  padding:20px;
+  padding:22px;
 
-  border-radius:18px;
+  border-radius:24px;
 
 }
 
 .stock-item{
 
   display:flex;
-
   justify-content:space-between;
 
-  margin-bottom:12px;
+  padding:10px 0;
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.08);
+
+}
+
+.stock-item:last-child{
+
+  border-bottom:none;
 
 }
 
 .summary{
 
-  margin-top:25px;
+  margin-top:28px;
 
-  background:rgba(255,255,255,0.12);
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.10)
+  );
 
-  padding:20px;
+  padding:30px;
 
-  border-radius:18px;
+  border-radius:28px;
 
-  line-height:2;
+  line-height:2.2;
+
+  text-align:center;
+
+  border:
+  1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+  0 12px 28px rgba(0,0,0,0.16);
+
+}
+
+.summary .small-info{
+
+  font-size:1rem;
+
+  opacity:0.92;
+
+}
+
+.summary .total-price{
+
+  font-size:3.3rem;
+
+  font-weight:800;
+
+  color:#ffd93d;
+
+  margin-top:12px;
+
+  line-height:1.2;
+
+  text-shadow:
+  0 6px 16px rgba(0,0,0,0.2);
 
 }
 
 .qr-section{
 
-  margin-top:30px;
+  margin-top:34px;
 
   text-align:center;
+
+}
+
+.qr-section h2{
+
+  margin-bottom:10px;
 
 }
 
@@ -183,25 +342,25 @@ option{
   width:100%;
   max-width:100%;
 
-  border-radius:20px;
+  border-radius:24px;
 
-  margin-top:15px;
-
-  border:4px solid rgba(255,255,255,0.2);
+  border:
+  4px solid rgba(255,255,255,0.14);
 
   object-fit:cover;
+
+  box-shadow:
+  0 10px 28px rgba(0,0,0,0.22);
 
 }
 
 .upload-box{
 
-  margin-top:25px;
+  margin-top:28px;
 
 }
 
 .upload-box input{
-
-  background:rgba(255,255,255,0.12);
 
   cursor:pointer;
 
@@ -211,31 +370,43 @@ button{
 
   width:100%;
 
-  padding:16px;
+  padding:18px;
 
   border:none;
 
-  border-radius:18px;
+  border-radius:20px;
 
-  margin-top:30px;
+  margin-top:34px;
 
-  background:white;
+  background:
+  linear-gradient(
+    135deg,
+    #ffd93d,
+    #f7c600
+  );
 
-  color:#ff5e62;
+  color:#082c5e;
 
-  font-size:16px;
+  font-size:17px;
 
   font-weight:700;
 
   cursor:pointer;
 
-  transition:0.3s;
+  transition:0.3s ease;
+
+  box-shadow:
+  0 10px 24px rgba(0,0,0,0.18);
 
 }
 
 button:hover{
 
-  transform:translateY(-2px);
+  transform:
+  translateY(-3px);
+
+  box-shadow:
+  0 14px 30px rgba(0,0,0,0.22);
 
 }
 
@@ -247,31 +418,42 @@ button:hover{
 
   margin-top:30px;
 
-  background:rgba(0,255,120,0.12);
+  background:
+  rgba(255,255,255,0.10);
 
-  padding:25px;
+  padding:28px;
 
-  border-radius:20px;
+  border-radius:24px;
 
 }
 
 .channel-btn{
 
-  display:inline-block;
-
+  display:inline-flex;
   margin-top:20px;
-
-  padding:14px 24px;
-
-  border-radius:16px;
-
+  padding:15px 24px;
+  border-radius:18px;
   background:#25D366;
-
   color:white;
-
   text-decoration:none;
-
   font-weight:600;
+  transition:0.25s ease;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+}
+
+.channel-btn:hover{
+
+  transform:
+  translateY(-2px);
+
+}
+
+.channel-btn i{
+
+  font-size:1.2rem;
 
 }
 
@@ -283,6 +465,27 @@ button:hover{
 
 }
 
+@media(max-width:768px){
+
+  .container{
+
+    padding:28px 22px;
+
+  }
+
+  h1{
+
+    font-size:2rem;
+
+  }
+
+  .summary .total-price{
+
+    font-size:2.7rem;
+
+  }
+
+}
 </style>
 </head>
 
@@ -290,10 +493,20 @@ button:hover{
 
 <div class="container">
 
-<h1>🥔 Mister Potato</h1>
+<div class="logo-wrapper">
+
+<img
+src="assets/LogoYummyMamee.png"
+alt="Logo"
+class="logo"
+>
+
+</div>
+
+<h1>Preorder Mister Potato</h1>
 
 <p class="subtitle">
-Late Night Snack Preorder
+You snack like a monster, they smile like angels.
 </p>
 
 <div class="info-box">
@@ -484,7 +697,8 @@ id="successBox"
 <br>
 
 <p>
-Thank you for supporting our project 🥔
+Thank you for supporting our entrepreneur project! <br/>
+A part of the profits will be donated to Asrama Kebajikan Ar Rayyan.
 </p>
 
 <a
@@ -493,7 +707,9 @@ href="https://chat.whatsapp.com/DqI0nCvvfCk5EqTNO0YSQw"
 target="_blank"
 >
 
-Join Channel For Updates
+<i class="fa-brands fa-whatsapp"></i>
+
+Join Our Channel For Updates & Inquiries
 
 </a>
 
@@ -676,26 +892,30 @@ function updateTotal(){
 
   summary.innerHTML = `
 
-  Flavor:
-  ${flavor || "Not selected"}
+    <div class="small-info">
 
-  <br>
+    Flavor:
+    ${flavor || "Not selected"}
 
-  Quantity:
-  ${quantity || 0}
+    <br>
 
-  <br>
+    Quantity:
+    ${quantity || 0}
 
-  Delivery Fee:
-  RM${delivery}
+    <br>
 
-  <br>
+    Delivery Fee:
+    RM${delivery}
 
-  Total Price:
-  RM${total}
+    </div>
 
-  `;
+    <div class="total-price">
 
+    Total: RM${total}
+
+    </div>
+
+    `;
 }
 
 quantityInput.addEventListener(

@@ -8,9 +8,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -33,27 +38,27 @@ body{
   justify-content:center;
   align-items:flex-start;
 
-  padding:24px;
+  padding:20px;
 
 }
 
 .container{
 
   width:100%;
-  max-width:760px;
+  max-width:680px;
 
   background:
-  rgba(8, 44, 94, 0.96);
+  rgba(8,44,94,0.96);
 
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
 
   border:
-  1px solid rgba(255,255,255,0.15);
+  1px solid rgba(255,255,255,0.12);
 
-  border-radius:32px;
+  border-radius:30px;
 
-  padding:40px 30px;
+  padding:26px 22px 30px;
 
   box-shadow:
   0 20px 40px rgba(0,0,0,0.22);
@@ -79,7 +84,7 @@ body{
   height:220px;
 
   background:
-  rgba(255,255,255,0.06);
+  rgba(255,255,255,0.05);
 
   border-radius:50%;
 
@@ -98,7 +103,7 @@ body{
   height:260px;
 
   background:
-  rgba(255,255,255,0.04);
+  rgba(255,255,255,0.03);
 
   border-radius:50%;
 
@@ -110,23 +115,21 @@ body{
   justify-content:center;
   align-items:center;
 
-  margin-bottom:5px;
+  margin-bottom:-10px;
 
 }
 
 .logo{
 
-  width:200px;
-  max-width:70%;
+  width:160px;
+  max-width:65%;
 
   height:auto;
 
   object-fit:contain;
 
   filter:
-  drop-shadow(0 10px 18px rgba(0,0,0,0.28));
-
-  margin-bottom:5px;
+  drop-shadow(0 10px 18px rgba(0,0,0,0.25));
 
 }
 
@@ -134,13 +137,11 @@ h1{
 
   text-align:center;
 
-  font-size:2.5rem;
+  font-size:2.2rem;
 
   font-weight:700;
 
   margin-bottom:6px;
-
-  letter-spacing:-1px;
 
 }
 
@@ -150,9 +151,31 @@ h1{
 
   opacity:0.9;
 
-  margin-bottom:28px;
+  margin-bottom:16px;
 
-  font-size:1rem;
+  font-size:0.96rem;
+
+}
+
+.hero-badge{
+
+  width:fit-content;
+
+  margin:0 auto 22px;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:
+  rgba(255,255,255,0.12);
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  font-size:0.9rem;
+
+  font-weight:600;
 
 }
 
@@ -162,17 +185,35 @@ h1{
   rgba(255,255,255,0.10);
 
   border:
-  1px solid rgba(255,255,255,0.10);
+  1px solid rgba(255,255,255,0.08);
 
-  padding:22px;
+  padding:18px;
 
-  border-radius:24px;
+  border-radius:20px;
 
-  line-height:2;
+  line-height:1.9;
 
-  margin-bottom:28px;
+  margin-bottom:20px;
 
-  font-size:15px;
+  font-size:14px;
+
+}
+
+.form-section{
+
+  margin-top:26px;
+
+}
+
+.section-title{
+
+  margin-bottom:14px;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+  opacity:0.92;
 
 }
 
@@ -180,12 +221,12 @@ label{
 
   display:block;
 
-  margin-top:18px;
+  margin-top:16px;
   margin-bottom:8px;
 
   font-weight:600;
 
-  font-size:15px;
+  font-size:14px;
 
 }
 
@@ -194,7 +235,7 @@ select{
 
   width:100%;
 
-  padding:16px 18px;
+  padding:15px 16px;
 
   border:none;
 
@@ -220,7 +261,7 @@ input:focus,
 select:focus{
 
   border:
-  1px solid rgba(255,255,255,0.4);
+  1px solid rgba(255,255,255,0.35);
 
   background:
   rgba(255,255,255,0.14);
@@ -235,128 +276,220 @@ input::placeholder{
 }
 
 option{
-
   color:black;
-
 }
 
-.stock-box{
-
-  margin-top:28px;
+.flavor-card{
 
   background:
   rgba(255,255,255,0.08);
 
-  padding:22px;
+  border:
+  1px solid rgba(255,255,255,0.08);
 
-  border-radius:24px;
+  border-radius:20px;
+
+  padding:14px 16px;
+
+  margin-bottom:12px;
+
+  transition:0.2s ease;
 
 }
 
-.stock-item{
+.flavor-card:hover{
+
+  background:
+  rgba(255,255,255,0.12);
+
+}
+
+.flavor-top{
 
   display:flex;
   justify-content:space-between;
+  align-items:center;
 
-  padding:10px 0;
-
-  border-bottom:
-  1px solid rgba(255,255,255,0.08);
+  margin-bottom:12px;
 
 }
 
-.stock-item:last-child{
+.flavor-name{
 
-  border-bottom:none;
+  font-size:1rem;
+  font-weight:600;
+
+}
+
+.flavor-stock{
+
+  opacity:0.8;
+  font-size:0.9rem;
+
+}
+
+.qty-controls{
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+}
+
+.qty-btn{
+
+  width:38px;
+  height:38px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  rgba(255,255,255,0.14);
+
+  color:white;
+
+  font-size:1.3rem;
+
+  cursor:pointer;
+
+  transition:0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.qty-btn:hover{
+
+  background:
+  rgba(255,255,255,0.22);
+
+}
+
+.qty-value{
+
+  min-width:30px;
+
+  text-align:center;
+
+  font-size:1.2rem;
+  font-weight:700;
 
 }
 
 .summary{
+
+  position:sticky;
+
+  bottom:12px;
 
   margin-top:28px;
 
   background:
   linear-gradient(
     135deg,
-    rgba(255,255,255,0.18),
-    rgba(255,255,255,0.10)
+    rgba(255,255,255,0.20),
+    rgba(255,255,255,0.12)
   );
 
-  padding:30px;
+  padding:22px;
 
-  border-radius:28px;
-
-  line-height:2.2;
+  border-radius:24px;
 
   text-align:center;
 
   border:
   1px solid rgba(255,255,255,0.18);
 
+  backdrop-filter:blur(18px);
+
   box-shadow:
-  0 12px 28px rgba(0,0,0,0.16);
+  0 12px 28px rgba(0,0,0,0.18);
+
+  z-index:5;
 
 }
 
 .summary .small-info{
 
-  font-size:1rem;
+  font-size:0.96rem;
 
   opacity:0.92;
+
+  line-height:1.9;
+
+}
+
+.summary-title{
+
+  font-size:0.9rem;
+
+  opacity:0.75;
+
+  margin-top:14px;
+
+  margin-bottom:4px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
 
 }
 
 .summary .total-price{
 
-  font-size:3.3rem;
+  font-size:2.7rem;
 
   font-weight:800;
 
   color:#ffd93d;
 
-  margin-top:12px;
-
-  line-height:1.2;
-
-  text-shadow:
-  0 6px 16px rgba(0,0,0,0.2);
+  line-height:1.1;
 
 }
 
 .qr-section{
 
-  margin-top:34px;
+  margin-top:26px;
 
   text-align:center;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  padding:20px;
+
+  border-radius:24px;
 
 }
 
 .qr-section h2{
 
-  margin-bottom:10px;
+  margin-bottom:14px;
 
 }
 
 .qr-section img{
 
   width:100%;
-  max-width:100%;
+  max-width:320px;
 
-  border-radius:24px;
+  border-radius:22px;
 
   border:
   4px solid rgba(255,255,255,0.14);
 
-  object-fit:cover;
-
   box-shadow:
-  0 10px 28px rgba(0,0,0,0.22);
+  0 10px 24px rgba(0,0,0,0.18);
 
 }
 
 .upload-box{
 
-  margin-top:28px;
+  margin-top:24px;
 
 }
 
@@ -370,13 +503,13 @@ button{
 
   width:100%;
 
-  padding:18px;
+  padding:17px;
 
   border:none;
 
   border-radius:20px;
 
-  margin-top:34px;
+  margin-top:26px;
 
   background:
   linear-gradient(
@@ -387,9 +520,11 @@ button{
 
   color:#082c5e;
 
-  font-size:17px;
+  font-size:16px;
 
   font-weight:700;
+
+  letter-spacing:0.5px;
 
   cursor:pointer;
 
@@ -403,10 +538,7 @@ button{
 button:hover{
 
   transform:
-  translateY(-3px);
-
-  box-shadow:
-  0 14px 30px rgba(0,0,0,0.22);
+  translateY(-2px);
 
 }
 
@@ -416,31 +548,41 @@ button:hover{
 
   text-align:center;
 
-  margin-top:30px;
+  margin-top:26px;
 
   background:
   rgba(255,255,255,0.10);
 
-  padding:28px;
+  padding:24px;
 
-  border-radius:24px;
+  border-radius:22px;
 
 }
 
 .channel-btn{
 
   display:inline-flex;
+
   margin-top:20px;
+
   padding:15px 24px;
+
   border-radius:18px;
+
   background:#25D366;
+
   color:white;
+
   text-decoration:none;
+
   font-weight:600;
-  transition:0.25s ease;
+
   align-items:center;
   justify-content:center;
+
   gap:10px;
+
+  transition:0.25s ease;
 
 }
 
@@ -467,25 +609,24 @@ button:hover{
 
 @media(max-width:768px){
 
+  body{
+    padding:14px;
+  }
+
   .container{
-
-    padding:28px 22px;
-
+    padding:22px 18px 26px;
   }
 
   h1{
-
-    font-size:2rem;
-
+    font-size:1.9rem;
   }
 
   .summary .total-price{
-
-    font-size:2.7rem;
-
+    font-size:2.3rem;
   }
 
 }
+
 </style>
 </head>
 
@@ -508,6 +649,10 @@ class="logo"
 <p class="subtitle">
 You snack like a monster, they smile like angels.
 </p>
+
+<div class="hero-badge">
+🍟 Limited Stock Available
+</div>
 
 <div class="info-box">
 
@@ -552,25 +697,17 @@ placeholder="01XXXXXXXX"
 required
 >
 
-<label>Select Flavor</label>
+<div class="form-section">
 
-<select id="flavor" required>
+<h3 class="section-title">
+Choose Your Flavors
+</h3>
 
-<option value="">
-Select Flavor
-</option>
+<div id="flavorContainer"></div>
 
-</select>
+</div>
 
-<label>Quantity</label>
-
-<input
-type="number"
-id="quantity"
-min="0"
-value="0"
-required
->
+<div class="form-section">
 
 <label>Delivery Method</label>
 
@@ -593,6 +730,8 @@ Delivery to Residential College
 </option>
 
 </select>
+
+</div>
 
 <div
 id="collegeContainer"
@@ -624,23 +763,11 @@ Select College
 </div>
 
 <div
-class="stock-box"
-id="stockContainer"
->
-
-Loading stock...
-
-</div>
-
-<div
 class="summary"
 id="summary"
 >
 
-Flavor: Not selected<br>
-Quantity: 0<br>
-Delivery Fee: RM0<br>
-Total Price: RM0
+Loading...
 
 </div>
 
@@ -709,7 +836,7 @@ target="_blank"
 
 <i class="fa-brands fa-whatsapp"></i>
 
-Join Our Channel For Updates & Inquiries
+Join Our Channel
 
 </a>
 
@@ -720,16 +847,10 @@ Join Our Channel For Updates & Inquiries
 <script>
 
 const API_URL =
-"https://script.google.com/macros/s/AKfycbx95KZLKdWERoM1qWVcZ5ARTl2UYEZCSL2s0aEVOc9cpgDykI9nos16FpjzJ1kHJ8pn/exec";
+"https://script.google.com/macros/s/AKfycbw4WclTanK40UawqsG5QMT42mh-jZToEaoWR3Iu9JntLtxMxZUzknxmXyNkGVTwxARh/exec";
 
-const flavorSelect =
-document.getElementById("flavor");
-
-const stockContainer =
-document.getElementById("stockContainer");
-
-const quantityInput =
-document.getElementById("quantity");
+const flavorContainer =
+document.getElementById("flavorContainer");
 
 const summary =
 document.getElementById("summary");
@@ -741,6 +862,8 @@ const collegeContainer =
 document.getElementById("collegeContainer");
 
 let stockData = [];
+
+let cart = {};
 
 deliveryMethod.addEventListener(
 "change",
@@ -775,49 +898,62 @@ async function loadStock(){
     stockData =
     await response.json();
 
-    flavorSelect.innerHTML = `
+    flavorContainer.innerHTML = "";
 
-    <option value="">
-    Select Flavor
-    </option>
-
-    `;
-
-    stockContainer.innerHTML = "";
+    cart = {};
 
     stockData.forEach(item=>{
 
-      const option =
-      document.createElement("option");
+      cart[item.flavor] = 0;
 
-      option.value =
-      item.flavor;
+      flavorContainer.innerHTML += `
 
-      option.textContent =
-      `${item.flavor} (${item.stock} left)`;
+      <div class="flavor-card">
 
-      if(item.stock <= 0){
+        <div class="flavor-top">
 
-        option.disabled = true;
+          <div class="flavor-name">
+          ${item.flavor}
+          </div>
 
-        option.textContent +=
-        " - SOLD OUT";
+          <div class="flavor-stock">
+          ${item.stock} left
+          </div>
 
-      }
+        </div>
 
-      flavorSelect.appendChild(option);
+        <div class="qty-controls">
 
-      stockContainer.innerHTML += `
+          <button
+          type="button"
+          class="qty-btn"
+          onclick="changeQty('${item.flavor}', -1)"
+          >
 
-      <div class="stock-item">
+          -
 
-        <span>
-        ${item.flavor}
-        </span>
+          </button>
 
-        <span>
-        ${item.stock} left
-        </span>
+          <div
+          class="qty-value"
+          id="qty-${item.flavor}"
+          >
+
+          0
+
+          </div>
+
+          <button
+          type="button"
+          class="qty-btn"
+          onclick="changeQty('${item.flavor}', 1)"
+          >
+
+          +
+
+          </button>
+
+        </div>
 
       </div>
 
@@ -829,23 +965,64 @@ async function loadStock(){
 
   }catch(err){
 
-    stockContainer.innerHTML =
+    summary.innerHTML =
     "Failed to load stock.";
 
   }
 
 }
 
+function changeQty(flavor, amount){
+
+  const item =
+  stockData.find(
+    x => x.flavor === flavor
+  );
+
+  if(!item) return;
+
+  cart[flavor] += amount;
+
+  if(cart[flavor] < 0){
+    cart[flavor] = 0;
+  }
+
+  if(cart[flavor] > item.stock){
+    cart[flavor] = item.stock;
+  }
+
+  document.getElementById(
+    `qty-${flavor}`
+  ).innerText = cart[flavor];
+
+  navigator.vibrate?.(20);
+
+  updateTotal();
+
+}
+
 function updateTotal(){
-
-  const quantity =
-  Number(quantityInput.value);
-
-  const flavor =
-  flavorSelect.value;
 
   const college =
   document.getElementById("college").value;
+
+  let totalQty = 0;
+
+  let selectedFlavors = [];
+
+  for(const flavor in cart){
+
+    if(cart[flavor] > 0){
+
+      totalQty += cart[flavor];
+
+      selectedFlavors.push(
+        `${flavor} x${cart[flavor]}`
+      );
+
+    }
+
+  }
 
   let delivery = 0;
 
@@ -861,72 +1038,67 @@ function updateTotal(){
     deliveryMethod.value === "delivery"
   ){
 
-    if(quantity >= 3){
+    if(totalQty >= 3){
 
       delivery = 0;
 
     }else{
 
       if(rm1Colleges.includes(college)){
-
         delivery = 1;
-
       }else if(college){
-
         delivery = 2;
-
       }
 
     }
 
   }
 
-  let total = 0;
-
-  if(flavor && quantity > 0){
-
-    total =
-    quantity * 4 + delivery;
-
-  }
+  const total =
+  totalQty * 4 + delivery;
 
   summary.innerHTML = `
 
-    <div class="small-info">
+  <div class="small-info">
 
-    Flavor:
-    ${flavor || "Not selected"}
+  Flavors:
+  <br>
 
-    <br>
+  ${
+    selectedFlavors.length
+    ?
+    selectedFlavors.join("<br>")
+    :
+    "No flavor selected"
+  }
 
-    Quantity:
-    ${quantity || 0}
+  <br><br>
 
-    <br>
+  Total Packs:
+  ${totalQty}
 
-    Delivery Fee:
-    RM${delivery}
+  <br>
 
-    </div>
+  Delivery Fee:
+  RM${delivery}
 
-    <div class="total-price">
+  </div>
 
-    Total: RM${total}
+  <div class="summary-title">
 
-    </div>
+  TOTAL PAYMENT
 
-    `;
+  </div>
+
+  <div class="total-price">
+
+  RM${total}
+
+  </div>
+
+  `;
+
 }
-
-quantityInput.addEventListener(
-"input",
-updateTotal
-);
-
-flavorSelect.addEventListener(
-"change",
-updateTotal
-);
 
 document
 .getElementById("college")
@@ -935,264 +1107,98 @@ document
 updateTotal
 );
 
-document
-.getElementById("orderForm")
+document.getElementById('orderForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
 
-.addEventListener(
-"submit",
+  let totalQty = 0;
+  for(const flavor in cart){
+    if(cart[flavor] > 0){
+      totalQty += cart[flavor];
+    }
+  }
 
-async function(e){
+  if(totalQty === 0) {
+    alert("Please select at least one flavor.");
+    return;
+  }
 
-e.preventDefault();
+  const submitBtn = document.querySelector('.submit-btn');
+  submitBtn.innerText = "Submitting...";
+  submitBtn.classList.add("loading");
 
-const submitBtn =
-document.querySelector(".submit-btn");
+  try {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const deliveryMethod = document.getElementById("deliveryMethod").value;
+    const college = document.getElementById("college").value;
+    const paymentProof = document.getElementById("paymentProof").files[0];
 
-submitBtn.innerText =
-"Submitting...";
-
-submitBtn.classList.add("loading");
-
-const quantity =
-Number(quantityInput.value);
-
-const flavor =
-flavorSelect.value;
-
-const college =
-document.getElementById("college").value;
-
-let delivery = 0;
-
-const rm1Colleges = [
-  "KRP",
-  "KTF",
-  "KTHO",
-  "KTR",
-  "KDSE"
-];
-
-if(
-  deliveryMethod.value === "delivery"
-){
-
-  if(quantity >= 3){
-
-    delivery = 0;
-
-  }else{
-
-    if(rm1Colleges.includes(college)){
-
-      delivery = 1;
-
-    }else{
-
-      delivery = 2;
-
+    let itemsArray = [];
+    for(const flavor in cart){
+      if(cart[flavor] > 0){
+        itemsArray.push({ flavor: flavor, quantity: cart[flavor] });
+      }
     }
 
+    let deliveryFee = 0;
+    const rm1Colleges = ["KRP", "KTF", "KTHO", "KTR", "KDSE"];
+    if(deliveryMethod === "delivery"){
+      if(totalQty >= 3){
+        deliveryFee = 0;
+      } else {
+        if(rm1Colleges.includes(college)){
+          deliveryFee = 1;
+        } else if(college){
+          deliveryFee = 2;
+        }
+      }
+    }
+    const totalPrice = totalQty * 4 + deliveryFee;
+
+    let fileData = null;
+    if (paymentProof) {
+      const fileBase64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(paymentProof);
+      });
+      fileData = {
+        data: fileBase64,
+        mimeType: paymentProof.type,
+        fileName: paymentProof.name
+      };
+    }
+
+    const payload = {
+      name: name,
+      phone: phone,
+      delivery: deliveryMethod,
+      college: college,
+      total: totalPrice,
+      items: itemsArray,
+      file: fileData
+    };
+
+    await fetch(API_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: JSON.stringify(payload)
+    });
+    
+    document.getElementById("orderForm").style.display = "none";
+    document.getElementById("successBox").style.display = "block";
+    
+    document.getElementById("finalSummary").innerHTML = document.getElementById("summary").innerHTML;
+
+  } catch(err) {
+    alert("Error submitting order. Please try again.");
+    submitBtn.innerText = "Submit Order";
+    submitBtn.classList.remove("loading");
   }
-
-}
-
-const total =
-quantity * 4 + delivery;
-
-const fileInput =
-document.getElementById("paymentProof");
-
-const file =
-fileInput.files[0];
-
-if(!flavor){
-
-  alert(
-    "Please select a flavor."
-  );
-
-  return;
-
-}
-
-if(quantity <= 0){
-
-  alert(
-    "Please enter quantity."
-  );
-
-  return;
-
-}
-
-if(!deliveryMethod.value){
-
-  alert(
-    "Please select delivery method."
-  );
-
-  return;
-
-}
-
-if(
-  deliveryMethod.value === "delivery"
-  &&
-  !college
-){
-
-  alert(
-    "Please select residential college."
-  );
-
-  return;
-
-}
-
-if(!file){
-
-  alert(
-    "Please upload payment proof."
-  );
-
-  return;
-
-}
-
-if(file.size > 5 * 1024 * 1024){
-
-  alert(
-    "File too large. Max 5MB."
-  );
-
-  return;
-
-}
-
-const reader =
-new FileReader();
-
-reader.onload =
-async function(){
-
-const base64Data =
-reader.result.split(",")[1];
-
-const data = {
-
-  name:
-  document.getElementById("name").value,
-
-  phone:
-  document.getElementById("phone").value,
-
-  flavor:
-  flavor,
-
-  quantity:
-  quantity,
-
-  college:
-  college,
-
-  delivery:
-  delivery,
-
-  total:
-  total,
-
-  file:{
-
-    fileName:
-    file.name,
-
-    mimeType:
-    file.type,
-
-    data:
-    base64Data
-
-  }
-
-};
-
-try{
-
-  const response =
-  await fetch(API_URL,{
-
-    method:"POST",
-
-    body:JSON.stringify(data)
-
-  });
-
-  const result =
-  await response.json();
-
-  if(result.status === "success"){
-
-    document
-    .getElementById("finalSummary")
-    .innerHTML = `
-
-    <b>Order Summary</b>
-
-    <br><br>
-
-    Flavor:
-    ${flavor}
-
-    <br>
-
-    Quantity:
-    ${quantity}
-
-    <br>
-
-    Delivery Fee:
-    RM${delivery}
-
-    <br>
-
-    Total Paid:
-    RM${total}
-
-    `;
-
-    document
-    .getElementById("orderForm")
-    .style.display = "none";
-
-    document
-    .getElementById("successBox")
-    .style.display = "block";
-
-    loadStock();
-
-  }else{
-
-    alert(result.message);
-
-  }
-
-}catch(err){
-
-  alert(
-    "Something went wrong."
-  );
-
-}
-
-submitBtn.innerText =
-"Submit Order";
-
-submitBtn.classList.remove("loading");
-
-};
-
-reader.readAsDataURL(file);
-
 });
 
 loadStock();

@@ -1260,6 +1260,13 @@ document.getElementById('orderForm').addEventListener('submit', async function(e
     return;
   }
 
+  // Block restricted names (Tester, QA, Test)
+  const restrictedNames = ["tester", "qa", "test"];
+  if (nameWords.some(word => restrictedNames.includes(word.toLowerCase()))) {
+    showCustomModal("Restricted Name", "Nice try! Tester and QA boleh gi mampus. 👤", "⚠️");
+    return;
+  }
+
   // Phone Validation: Malaysian phone number check
   const cleanedPhone = phone.replace(/[-\s]/g, ""); // strip hyphens and spaces
   const phoneRegex = /^(?:\+?6?01)[0-9]{8,9}$/;
